@@ -14,7 +14,7 @@ $('#data .version').each(function(){
     $.get('//ajax.googleapis.com/ajax/libs/jquery/' + tr.find('th').text() + '/jquery.min.js', function(data, st, xhr){
         var dt = new Date(xhr.getResponseHeader('Last-Modified')).toISOString().slice(0, 10)
         if(dt == '2012-04-02') dt = ''
-        tr.append('<td>' + dt + '<td><span style="border-right: ' + data.length/100 + 'px solid #fe8">' + data.length)
+        tr.append('<td>' + dt + '<td><span style="display: inline-block; background: #fe8; width: ' + data.length/100 + 'px">' + data.length)
     })
 })
 </script>
